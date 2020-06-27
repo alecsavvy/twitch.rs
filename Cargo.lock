@@ -13,10 +13,6 @@ name = "auth"
 version = "0.1.0"
 
 [[package]]
-name = "core"
-version = "0.1.0"
-
-[[package]]
 name = "drops"
 version = "0.1.0"
 
@@ -34,5 +30,9 @@ version = "0.1.0"
 
 [[package]]
 name = "pubsub"
+version = "0.1.0"
+
+[[package]]
+name = "twitch_core"
 version = "0.1.0"
 

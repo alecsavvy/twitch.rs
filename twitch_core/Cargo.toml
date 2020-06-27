@@ -1,5 +1,5 @@
 [package]
-name = "core"
+name = "twitch_core"
 version = "0.1.0"
 authors = ["alecsavvy <alecsavvy@outlook.com>"]
 edition = "2018"

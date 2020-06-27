@@ -3,10 +3,10 @@ members = [
     "api_helix",
     "api_kraken",
     "auth",
-    "core",
     "drops",
     "extensions",
     "insights",
     "irc",
-    "pubsub"
+    "pubsub",
+    "twitch_core"
 ]

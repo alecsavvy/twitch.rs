@@ -10,8 +10,21 @@ pub struct AppAccessTokenResponse {
     pub token_type: String,
 }
 
-pub async fn get_app_access_token() -> Result<()> {
-    let url = format!("");
-    Client::new().post(&url).send().await?;
-    Ok(())
+pub async fn get_app_access_token(
+    client_id: String,
+    client_secret: String,
+) -> Result<AppAccessTokenResponse> {
+    let url = format!(
+        "https://id.twitch.tv/oauth2/token
+    ?client_id={}
+    &client_secret={}
+    &grant_type=client_credentials",
+        client_id, client_secret
+    );
+    Client::new()
+        .post(&url)
+        .send()
+        .await?
+        .json::<AppAccessTokenResponse>()
+        .await
 }

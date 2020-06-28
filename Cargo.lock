@@ -14,6 +14,9 @@ version = "0.1.0"
 [[package]]
 name = "auth"
 version = "0.1.0"
+dependencies = [
+ "twitch_core 0.1.0",
+]
 
 [[package]]
 name = "autocfg"

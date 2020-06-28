@@ -17,7 +17,6 @@ pub async fn get_app_access_token(
         "https://id.twitch.tv/oauth2/token?client_id={}&client_secret={}&grant_type=client_credentials",
         client_id, client_secret
     );
-    println!("{}", url);
     Client::new()
         .post(&url)
         .send()
@@ -32,6 +31,5 @@ fn it_gets_access_token() {
     let client_secret = "";
 
     let mut rt = tokio::runtime::Runtime::new().unwrap();
-    let res = rt.block_on(get_app_access_token(client_id.into(), client_secret.into()));
-    println!("{:?}", res);
+    let _ = rt.block_on(get_app_access_token(client_id.into(), client_secret.into()));
 }

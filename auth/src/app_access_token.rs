@@ -1,5 +1,5 @@
+use reqwest::{Client, Result};
 use serde::{Deserialize, Serialize};
-use twitch_core::reqwest::{Client, Result};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AppAccessTokenResponse {

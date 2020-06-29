@@ -1,4 +1,4 @@
-use auth::app_access_token::{get_app_access_token, AppAccessToken};
+use auth::app_access_token::get_app_access_token;
 use reqwest::{
     header::{HeaderMap, HeaderValue},
     Client, IntoUrl, RequestBuilder,

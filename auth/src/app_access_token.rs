@@ -17,12 +17,14 @@ pub async fn get_app_access_token(
         "https://id.twitch.tv/oauth2/token?client_id={}&client_secret={}&grant_type=client_credentials",
         client_id, client_secret
     );
-    Client::new()
+    let token = Client::new()
         .post(&url)
         .send()
         .await?
         .json::<AppAccessToken>()
-        .await
+        .await;
+    println!("got access token {:?}", token);
+    token
 }
 
 #[test]

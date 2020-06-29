@@ -43,8 +43,8 @@ pub async fn get_streams(session: Session) -> Result<GetStreamsResponse> {
 
 #[test]
 fn it_gets_streams() {
-    let client_id = "39l3dnoujzu8157zap78wnp204zbhr";
-    let client_secret = "paht6g0995hldgc70nmtiwo4evj6kw";
+    let client_id = "";
+    let client_secret = "";
 
     let mut rt = tokio::runtime::Runtime::new().unwrap();
     let session = rt.block_on(Session::new(client_id.into(), client_secret.into()));
